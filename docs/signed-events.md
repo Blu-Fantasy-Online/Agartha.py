@@ -7,7 +7,7 @@
 Install the wheel with its `webhooks` extra:
 
 ```text
-python -m pip install "./agartha_py-0.5.1-py3-none-any.whl[webhooks]"
+python -m pip install "./agartha_py-0.5.2-py3-none-any.whl[webhooks]"
 ```
 
 This adds the supported PyNaCl dependency. Obtain the approved sender's Ed25519 public key through its configuration process.

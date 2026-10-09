@@ -1,15 +1,15 @@
 # Agartha.py
 
-Async Python SDK for building applications and bots on **BFO Agartha**. Version **0.5.1** adds public user/bot and role mention helpers, bounded explicit notification recipients, and stricter mention validation. Typed bot profiles, native support links, REST calls, Gateway events, commands, message layouts, interactive replies, forms, attachments, and account OAuth remain available.
+Async Python SDK for building applications and bots on **BFO Agartha**. Version **0.5.2** adds ordinary chat uploads, typed attachments, retained file edits, authenticated downloads, and public server emoji/sticker metadata. Bot profiles, native support links, public mentions, REST calls, Gateway events, commands, message layouts, interactive replies, forms, and account OAuth remain available.
 
 **Python 3.12+** is required. Runtime dependency: `aiohttp==3.14.4`. The optional `webhooks` extra adds `PyNaCl==1.6.2` for the signed receiver utility.
 
 ## Install
 
-Download the [published wheel](https://github.com/Blu-Fantasy-Online/Agartha.py/releases/download/v0.5.1/agartha_py-0.5.1-py3-none-any.whl) and install it:
+Download the [published wheel](https://github.com/Blu-Fantasy-Online/Agartha.py/releases/download/v0.5.2/agartha_py-0.5.2-py3-none-any.whl) and install it:
 
 ```text
-python -m pip install ./agartha_py-0.5.1-py3-none-any.whl
+python -m pip install ./agartha_py-0.5.2-py3-none-any.whl
 ```
 
 Official SDK releases, examples, checksums, and issue tracking are available in the [BFO Agartha.py repository](https://github.com/Blu-Fantasy-Online/Agartha.py). Install the published wheel until a public package registry release is announced.
@@ -67,6 +67,7 @@ The [developer documentation](https://blufantasy.online/agartha/developers/docs)
 | [Message layouts](https://blufantasy.online/agartha/developers/docs?doc=message-layouts) | Native blocks, galleries, progress, and placed actions |
 | [Classic embeds](https://blufantasy.online/agartha/developers/docs?doc=embeds) | Rich cards, attribution, and message budgets |
 | [REST resources](https://blufantasy.online/agartha/developers/docs?doc=resources) | Typed helpers and generic API operations |
+| [Files and expressions in chat](https://blufantasy.online/agartha/developers/docs?doc=ordinary-media) | Ordinary uploads, attachment edits, downloads, and server emoji/stickers |
 | [Gateway](https://blufantasy.online/agartha/developers/docs?doc=gateway) | Events, intents, presence, and resume |
 | [OAuth](https://blufantasy.online/agartha/developers/docs?doc=oauth) | Consent, PKCE, account reads, refresh, and revocation |
 | [Errors and limits](https://blufantasy.online/agartha/developers/docs?doc=errors-and-limits) | Retry behavior, permissions, deadlines, and quotas |
@@ -77,7 +78,7 @@ Use `Client` for REST-only work. Typed resources retain their response fields in
 
 The SDK learns response rate buckets and retries only confirmed HTTP 429 responses. Other failures are not automatically replayed. Defer interactions before long work; initial acknowledgements have a three-second deadline, and follow-ups have a 15-minute window.
 
-Native v1 does not provide general developer voice connections, bot DMs, user-installed bots, general multipart bot uploads, custom reaction emoji, or an active outbound HTTP interaction service. Refer to the guide for current supported methods and application approval requirements.
+Native v1 does not provide general developer voice connections, bot DMs, user-installed bots, custom reaction emoji, or an active outbound HTTP interaction service. Refer to the guide for current supported methods and application approval requirements.
 
 ## Native message layouts
 

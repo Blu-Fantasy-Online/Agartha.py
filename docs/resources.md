@@ -42,7 +42,9 @@ Typed helpers return immutable model objects. Every model has `.id` and `.raw`; 
 | `SupportServer` | `name`, `join_url` |
 | `Server` | `name`, `public_id` |
 | `Channel` | `name`, `server_id` |
-| `Message` | `content`, `channel_id` |
+| `Message` | `content`, `channel_id`, `attachments`, `expressions` |
+| `Attachment` | `filename`, `size`, `content_type`, `url`, `reference()` |
+| `Expression` | `name`, `kind`, `url` |
 | `Role` | `name` |
 | `Member` | Read `username`, `display_name`, `status`, and `joined_at` from `raw` |
 | `Resource` | Generic resource object |
@@ -114,6 +116,8 @@ Only `before` pagination is currently implemented for message history. Lists inc
 A bot can edit only its own messages. Deleting another author's message requires `manage_messages`; ordinary posting requires `send_messages`. A stable `nonce` identifies a specific create operation: retrying the same creation with the same payload and nonce returns its prior message when still accessible. Changing the payload under that nonce is a conflict. Do not reuse a nonce for a different message.
 
 ## Reactions
+
+See [files and expressions in chat](ordinary-media.md) for ordinary media uploads, attachment-only posts, retained file edits, downloads, and server emoji/sticker references.
 
 ```python
 await client.add_reaction(channel_id, message_id, "✅")

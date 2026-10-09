@@ -1,5 +1,5 @@
 {
-  "version": "0.5.1",
+  "version": "0.5.2",
   "pages": [
     { "id": "overview", "title": "Agartha developer documentation", "group": "Start building", "description": "Create an application, install a bot, and choose a guide.", "file": "README.md" },
     { "id": "quick-start", "title": "Build your first bot", "group": "Start building", "description": "Install Agartha.py and run a slash command in your test server.", "file": "quick-start.md" },
@@ -10,6 +10,7 @@
     { "id": "message-layouts", "title": "Message layouts", "group": "Interactions", "description": "Compose sections, galleries, facts, progress, expandable details, and placed actions with Agartha.py.", "file": "message-layouts.md" },
     { "id": "embeds", "title": "Classic embeds", "group": "Interactions", "description": "Build validated cards with fields, images, attribution, timestamps, and shared limits.", "file": "embeds.md" },
     { "id": "resources", "title": "REST resources and methods", "group": "API reference", "description": "Agartha.py calls for servers, channels, messages, members, roles, and moderation.", "file": "resources.md" },
+    { "id": "ordinary-media", "title": "Files and expressions in chat", "group": "API reference", "description": "Upload normal chat media, retain or remove attachments, and read public server expressions.", "file": "ordinary-media.md" },
     { "id": "gateway", "title": "Gateway and events", "group": "API reference", "description": "Event handlers, intents, presence, reconnects, and sessions.", "file": "gateway.md" },
     { "id": "oauth", "title": "Account authorization", "group": "API reference", "description": "OAuth consent, PKCE, token exchange, account reads, and revocation.", "file": "oauth.md" },
     { "id": "errors-and-limits", "title": "Errors and rate limits", "group": "Operations", "description": "Handle permissions, 429 responses, connection failures, and deadlines.", "file": "errors-and-limits.md" },

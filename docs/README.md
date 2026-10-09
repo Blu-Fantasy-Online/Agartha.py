@@ -22,6 +22,7 @@ Build bots for BFO Agartha servers with **Agartha.py**. Use the SDK to register 
 | Composed sections, galleries, facts, progress, details, and actions | [Message layouts](message-layouts.md) |
 | Classic cards, fields, images, and attribution | [Classic embeds](embeds.md) |
 | Messages, channels, members, roles, and moderation | [REST resources and methods](resources.md) |
+| Ordinary attachments, GIFs, and server expressions | [Files and expressions in chat](ordinary-media.md) |
 | Event handlers and bot presence | [Gateway and events](gateway.md) |
 | Connect a user's account with consent | [Account authorization](oauth.md) |
 | Reliable requests and error handling | [Errors and rate limits](errors-and-limits.md) |
@@ -60,6 +61,6 @@ An ID identifies a resource; it does not grant permission to access it. Bot inst
 
 The native API supports server installations, messages, channels, roles, member moderation, Unicode reactions, Gateway events, slash and context commands, autocomplete, interactive replies, bot-requested forms, and submitted attachments. Account OAuth provides explicit read scopes. App monetization requires the approval and provider setup described in the earnings guide.
 
-General developer voice connections, bot direct messages, user-installed bots, general multipart bot uploads, and custom reaction emoji are not available in native v1. The optional [signed event receiver](signed-events.md) is a utility; outbound HTTP interaction delivery is not an active alternative to the Gateway.
+General developer voice connections, bot direct messages, user-installed bots, and custom reaction emoji are not available in native v1. [Ordinary media uploads](ordinary-media.md) support file-backed chat messages. The optional [signed event receiver](signed-events.md) is a utility; outbound HTTP interaction delivery is not an active alternative to the Gateway.
 
 Agartha has its own API. Use the methods and response shapes in this guide rather than substituting another platform's endpoints.
