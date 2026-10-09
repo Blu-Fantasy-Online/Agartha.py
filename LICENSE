@@ -1,0 +1,33 @@
+Agartha.py Developer SDK License 1.0
+Copyright (c) 2026 Blu Fantasy Online LLC. All rights reserved.
+
+Blu Fantasy Online LLC (BFO) grants you a limited, nonexclusive,
+nontransferable license to install and execute official, unmodified Agartha.py
+releases to develop and operate your own applications and bots connecting to
+the authorized BFO Agartha API. You may make copies necessary for your own
+development, testing, deployment, backups, and dependency caching. Commercial
+bots are permitted subject to BFO's developer and platform terms.
+
+You may use and adapt the separately identified documentation examples in
+your own bot application. This permission does not permit modifying the SDK,
+extracting its implementation, or reproducing the SDK or Agartha platform.
+
+Except as expressly permitted above or required by applicable law, you may
+not redistribute, sublicense, sell, publish, modify, decompile, disassemble,
+or reverse engineer the SDK, or use its implementation to recreate, clone,
+or develop a substitute for Agartha.py or the Agartha platform. You may not
+remove copyright, licensing, ownership, or attribution notices. No rights to
+BFO names, logos, credentials, hosted services, or platform source are granted.
+
+Third-party dependencies remain governed by their own licenses. This license
+does not restrict rights independently granted for those dependencies.
+
+The SDK is provided "AS IS", without warranties of any kind, to the maximum
+extent permitted by applicable law. To that extent, BFO is not liable for
+damages arising from use of the SDK. This license terminates if you materially
+violate its conditions; you must then stop using the SDK and remove copies
+except those you are legally required to retain.
+
+Contact Blu Fantasy Online LLC through https://www.blufantasy.online/support
+for permission beyond this license. Public availability of a release is not
+an open-source license or permission to reproduce its implementation.

@@ -1,0 +1,18 @@
+{
+  "version": "0.4.0",
+  "pages": [
+    { "id": "overview", "title": "Agartha developer documentation", "group": "Start building", "description": "Create an application, install a bot, and choose a guide.", "file": "README.md" },
+    { "id": "quick-start", "title": "Build your first bot", "group": "Start building", "description": "Install Agartha.py and run a slash command in your test server.", "file": "quick-start.md" },
+    { "id": "ai-bots", "title": "Build an AI bot", "group": "Start building", "description": "Connect your own provider with scoped text history, private commands, and bounded requests.", "file": "ai-bots.md" },
+    { "id": "commands", "title": "Application commands", "group": "Interactions", "description": "Slash commands, options, groups, autocomplete, and context actions.", "file": "commands.md" },
+    { "id": "interactions", "title": "Replies, menus, and forms", "group": "Interactions", "description": "Respond, defer, update, build components, and handle attachments.", "file": "interactions.md" },
+    { "id": "message-layouts", "title": "Message layouts", "group": "Interactions", "description": "Compose sections, galleries, facts, progress, expandable details, and placed actions with Agartha.py.", "file": "message-layouts.md" },
+    { "id": "embeds", "title": "Classic embeds", "group": "Interactions", "description": "Build validated cards with fields, images, attribution, timestamps, and shared limits.", "file": "embeds.md" },
+    { "id": "resources", "title": "REST resources and methods", "group": "API reference", "description": "Agartha.py calls for servers, channels, messages, members, roles, and moderation.", "file": "resources.md" },
+    { "id": "gateway", "title": "Gateway and events", "group": "API reference", "description": "Event handlers, intents, presence, reconnects, and sessions.", "file": "gateway.md" },
+    { "id": "oauth", "title": "Account authorization", "group": "API reference", "description": "OAuth consent, PKCE, token exchange, account reads, and revocation.", "file": "oauth.md" },
+    { "id": "errors-and-limits", "title": "Errors and rate limits", "group": "Operations", "description": "Handle permissions, 429 responses, connection failures, and deadlines.", "file": "errors-and-limits.md" },
+    { "id": "monetization", "title": "Products and earnings", "group": "Operations", "description": "Subscriptions, entitlement checks, platform fees, and team cashout.", "file": "monetization.md" },
+    { "id": "signed-events", "title": "Signed event receiver utility", "group": "Operations", "description": "Optional HTTP signature verification for a separately configured event sender.", "file": "signed-events.md" }
+  ]
+}
