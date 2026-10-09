@@ -37,7 +37,9 @@ Typed helpers return immutable model objects. Every model has `.id` and `.raw`; 
 
 | Model | Properties beyond `id` and `raw` |
 | --- | --- |
-| `Application` | `name` |
+| `Application` | `name`, `description`, `headline`, `icon_url`, `banner_url`, `website_url`, `docs_url`, `support_url`, `privacy_url`, `terms_url`, `tags`, `supported_languages`, `bot`, `support_server` |
+| `BotIdentity` | `application_id`, `name`, `avatar_url` |
+| `SupportServer` | `name`, `join_url` |
 | `Server` | `name`, `public_id` |
 | `Channel` | `name`, `server_id` |
 | `Message` | `content`, `channel_id` |
@@ -46,6 +48,8 @@ Typed helpers return immutable model objects. Every model has `.id` and `.raw`; 
 | `Resource` | Generic resource object |
 
 `Server.id` and `Server.public_id` refer to the same server identity. An optional related ID may be `None`. Do not substitute an ID for a missing display name.
+
+Read [bot identity and profiles](bot-identity.md) for application metadata, image uploads, and native support links. Missing optional profile text and URLs return `None`; tags and supported languages return immutable tuples.
 
 ## Applications, servers, and channels
 

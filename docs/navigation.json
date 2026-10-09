@@ -1,8 +1,9 @@
 {
-  "version": "0.4.0",
+  "version": "0.5.0",
   "pages": [
     { "id": "overview", "title": "Agartha developer documentation", "group": "Start building", "description": "Create an application, install a bot, and choose a guide.", "file": "README.md" },
     { "id": "quick-start", "title": "Build your first bot", "group": "Start building", "description": "Install Agartha.py and run a slash command in your test server.", "file": "quick-start.md" },
+    { "id": "bot-identity", "title": "Bot identity and profiles", "group": "Start building", "description": "Configure profile images, tags, languages, useful links, and a native support server; read them with Agartha.py.", "file": "bot-identity.md" },
     { "id": "ai-bots", "title": "Build an AI bot", "group": "Start building", "description": "Connect your own provider with scoped text history, private commands, and bounded requests.", "file": "ai-bots.md" },
     { "id": "commands", "title": "Application commands", "group": "Interactions", "description": "Slash commands, options, groups, autocomplete, and context actions.", "file": "commands.md" },
     { "id": "interactions", "title": "Replies, menus, and forms", "group": "Interactions", "description": "Respond, defer, update, build components, and handle attachments.", "file": "interactions.md" },

@@ -4,11 +4,11 @@ This guide connects a bot to your test server and adds `/ping`. You need an appr
 
 ## Install Agartha.py
 
-Use **Python 3.12 or newer**. Download the [0.4.0 wheel](https://github.com/Blu-Fantasy-Online/Agartha.py/releases/download/v0.4.0/agartha_py-0.4.0-py3-none-any.whl), then run:
+Use **Python 3.12 or newer**. Download the [0.5.0 wheel](https://github.com/Blu-Fantasy-Online/Agartha.py/releases/download/v0.5.0/agartha_py-0.5.0-py3-none-any.whl), then run:
 
 ```text
 python -m venv .venv
-python -m pip install ./agartha_py-0.4.0-py3-none-any.whl
+python -m pip install ./agartha_py-0.5.0-py3-none-any.whl
 ```
 
 Activate your virtual environment before installing or running the bot: use `.venv\Scripts\Activate.ps1` in Windows PowerShell, or `source .venv/bin/activate` on macOS/Linux. Official [GitHub releases](https://github.com/Blu-Fantasy-Online/Agartha.py/releases) and [SHA256 checksums](https://www.blufantasy.online/downloads/agartha/SHA256SUMS) are available. Install the published wheel until a public package registry release is announced. Agartha.py is proprietary; its [SDK license](https://github.com/Blu-Fantasy-Online/Agartha.py/blob/main/LICENSE) permits building your own bots while restricting redistribution and recreating the SDK or platform.

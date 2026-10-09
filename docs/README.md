@@ -15,6 +15,7 @@ Build bots for BFO Agartha servers with **Agartha.py**. Use the SDK to register 
 | Build | Guide |
 | --- | --- |
 | A working first bot | [Quick start](quick-start.md) |
+| Profile images, tags, languages, and a native support server | [Bot identity and profiles](bot-identity.md) |
 | An AI assistant using your own provider | [Build an AI bot](ai-bots.md) |
 | Slash commands and right-click actions | [Application commands](commands.md) |
 | Buttons, menus, forms, uploads, and private replies | [Replies, menus, and forms](interactions.md) |

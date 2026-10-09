@@ -1,15 +1,15 @@
 # Agartha.py
 
-Async Python SDK for building applications and bots on **BFO Agartha**. Version **0.4.0** supports native REST calls, Gateway events, application commands, native message layouts, interactive replies, menus, forms, submitted attachments, and account OAuth.
+Async Python SDK for building applications and bots on **BFO Agartha**. Version **0.5.0** adds typed bot profiles, application metadata, and native support server links alongside REST calls, Gateway events, application commands, message layouts, interactive replies, menus, forms, submitted attachments, and account OAuth.
 
 **Python 3.12+** is required. Runtime dependency: `aiohttp==3.14.4`. The optional `webhooks` extra adds `PyNaCl==1.6.2` for the signed receiver utility.
 
 ## Install
 
-Download the [published wheel](https://github.com/Blu-Fantasy-Online/Agartha.py/releases/download/v0.4.0/agartha_py-0.4.0-py3-none-any.whl) and install it:
+Download the [published wheel](https://github.com/Blu-Fantasy-Online/Agartha.py/releases/download/v0.5.0/agartha_py-0.5.0-py3-none-any.whl) and install it:
 
 ```text
-python -m pip install ./agartha_py-0.4.0-py3-none-any.whl
+python -m pip install ./agartha_py-0.5.0-py3-none-any.whl
 ```
 
 Official SDK releases, examples, checksums, and issue tracking are available in the [BFO Agartha.py repository](https://github.com/Blu-Fantasy-Online/Agartha.py). Install the published wheel until a public package registry release is announced.
@@ -60,6 +60,7 @@ The [developer documentation](https://blufantasy.online/agartha/developers/docs)
 | Guide | Covers |
 | --- | --- |
 | [Quick start](https://blufantasy.online/agartha/developers/docs?doc=quick-start) | Install, run, register, and test a bot |
+| [Bot identity](https://blufantasy.online/agartha/developers/docs?doc=bot-identity) | Profile images, tags, languages, useful links, and native support servers |
 | [Build an AI bot](https://blufantasy.online/agartha/developers/docs?doc=ai-bots) | Your own provider, scoped text history, private commands, and bounded requests |
 | [Application commands](https://blufantasy.online/agartha/developers/docs?doc=commands) | Slash options, groups, autocomplete, and user/message actions |
 | [Interactions](https://blufantasy.online/agartha/developers/docs?doc=interactions) | Replies, defer, follow-ups, components, forms, and attachments |
@@ -122,6 +123,12 @@ payload = embed_payloads(card)
 ```
 
 `Embed.to_dict()` returns one validated dictionary; `embed_payloads(*cards)` checks the complete message budgets described above. Fields, author/footer icons and links, HTTPS images/thumbnails, and timezone-aware timestamps are supported. Invalid edits raise `ValueError` while preserving the previous builder state. `examples/rich_embeds.py` provides a runnable slash command.
+
+## Bot identity and profiles
+
+`await client.get_application()` returns an `Application` with typed description, headline, image URLs, website and documentation links, tags, and supported languages. `application.bot` is a `BotIdentity` with its own public ID, application ID, name, and avatar URL. An active native support invite appears as `application.support_server`, a `SupportServer` with its name and join URL.
+
+Configure the profile and upload icons or banners through the authenticated developer portal. Optional text and links return `None` when unset; tags and languages return immutable tuples. Existing response fields remain available in `.raw`. `examples/bot_identity.py` reads the profile and builds a message layout preview without posting it.
 
 ## AI assistants
 
