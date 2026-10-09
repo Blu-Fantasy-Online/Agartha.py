@@ -86,7 +86,7 @@ message = await client.edit_message(
 )
 ```
 
-Messages accept up to 2,000 content characters, ten embeds, and five component rows. An embed-only message is supported. Classic cards have a combined 6,000-character text limit and a 32,000-byte representation limit. Messages containing [layouts](message-layouts.md) allow up to three layouts, 40 blocks, 12,000 combined text characters, and 48,000 embed bytes; classic text still fits within 6,000 characters. Complete message data must fit within 60,000 bytes. Use HTTPS links for media and links. Mentions are suppressed by default; general ping authority is unavailable in native v1.
+Messages accept up to 2,000 content characters, ten embeds, and five component rows. An embed-only message is supported. Classic cards have a combined 6,000-character text limit and a 32,000-byte representation limit. Messages containing [layouts](message-layouts.md) allow up to three layouts, 40 blocks, 12,000 combined text characters, and 48,000 embed bytes; classic text still fits within 6,000 characters. Complete message data must fit within 60,000 bytes. Use HTTPS links for media and links. Mention alerts are suppressed by default; see [explicit mention alerts](interactions.md#explicit-mention-alerts) for bounded recipients and server policy.
 
 | Agartha.py call | Return |
 | --- | --- |
@@ -95,6 +95,9 @@ Messages accept up to 2,000 content characters, ten embeds, and five component r
 | `get_message(channel_id, message_id)` | `Message` |
 | `edit_message(channel_id, message_id, **fields)` | `Message` |
 | `delete_message(channel_id, message_id)` | `None` |
+| `mention_user(user_id)` | Public user/bot reference string; no alert authority |
+| `mention_role(role_id)` | Public role reference string; no alert authority |
+| `allowed_mentions(*, users=(), roles=())` | Explicit recipient dictionary, at most 20 users/bots and five roles |
 
 Message lists are newest first. `limit` defaults to 50 and is capped at 100. `before` accepts a message ID from that channel:
 

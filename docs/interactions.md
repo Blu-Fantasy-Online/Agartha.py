@@ -15,7 +15,36 @@ async def status(interaction: Interaction) -> None:
 
 `ephemeral=True` makes the reply visible only to the invoking account in that channel. Omit it for a public chat reply. A command does not open a form unless your handler requests one.
 
-Messages suppress mentions by default. Native v1 does not grant general user, role, `@here`, or `@everyone` ping authority to bots. Use ordinary names and rich embed text for informational posts.
+Messages suppress mention alerts by default. Reference a user or bot with `<@PUBLIC_ID>` and a role with `<@&PUBLIC_ID>`, using its 18-digit public ID as a string. Chat presents the reference with the current name. `<@!PUBLIC_ID>` is also accepted as a user/bot reference. Mention tokens do not grant notification authority.
+
+## Explicit mention alerts
+
+To notify specific recipients, include their public IDs in `allowed_mentions`. Only references in the message's `content` can trigger these alerts. Text inside embeds, message layouts, or component labels does not trigger a mention alert.
+
+```python
+from agartha import allowed_mentions, mention_user, public_id
+
+member_id = public_id("100000000000000081")
+await interaction.respond(
+    f"Your report is ready, {mention_user(member_id)}.",
+    allowed_mentions=allowed_mentions(users=[member_id]),
+)
+```
+
+| `allowed_mentions` field | Accepted value |
+| --- | --- |
+| `parse` | Omitted or an empty list; automatic parsing is unavailable |
+| `users` | Omitted or a list of up to 20 unique public user/bot IDs |
+| `roles` | Omitted or a list of up to five unique public role IDs |
+| `replied_user` | Omitted or `false`; replies do not automatically notify their author |
+
+`mention_user(id)`, `mention_role(id)`, and `allowed_mentions(users=(), roles=())` require **Agartha.py 0.5.1 or newer**. The first two create references; `allowed_mentions` creates the explicit notification policy. You can also pass the same fields as a dictionary.
+
+The server checks each reference against the current visible server members, installed bots, and server roles. To opt in to a role alert, the role must be mentionable, or the bot must have the server's `mention_roles` permission. A display-only role reference needs no alert permission. The server's default/everyone role cannot be an alert recipient. Listing a recipient does not bypass channel access or their notification preferences. Bot references display the bot's name; they do not generate an account notification for a person. `@everyone` and `@here` are unavailable to bots.
+
+The same policy applies to `Client.create_message`, message edits, initial interaction replies, source updates, and follow-up messages. Edits and source updates do not resend mention alerts. Ephemeral replies remain visible only to the invoker and produce no mention alerts. For an informational post, omit `allowed_mentions` and use ordinary names in your message or card.
+
+Only public-ID mention tokens are accepted. A complete malformed reference is rejected; an unfinished `<@` remains ordinary text. The SDK and API validate message references before processing a mutation.
 
 For rich cards, use `Embed` and `embed_payloads(...)` with `respond`, `edit_original`, or `followup`. See [rich embeds](embeds.md) for fields, media, attribution, and complete message limits. For provider-backed text replies, see [Build an AI bot](ai-bots.md).
 

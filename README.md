@@ -1,15 +1,15 @@
 # Agartha.py
 
-Async Python SDK for building applications and bots on **BFO Agartha**. Version **0.5.0** adds typed bot profiles, application metadata, and native support server links alongside REST calls, Gateway events, application commands, message layouts, interactive replies, menus, forms, submitted attachments, and account OAuth.
+Async Python SDK for building applications and bots on **BFO Agartha**. Version **0.5.1** adds public user/bot and role mention helpers, bounded explicit notification recipients, and stricter mention validation. Typed bot profiles, native support links, REST calls, Gateway events, commands, message layouts, interactive replies, forms, attachments, and account OAuth remain available.
 
 **Python 3.12+** is required. Runtime dependency: `aiohttp==3.14.4`. The optional `webhooks` extra adds `PyNaCl==1.6.2` for the signed receiver utility.
 
 ## Install
 
-Download the [published wheel](https://github.com/Blu-Fantasy-Online/Agartha.py/releases/download/v0.5.0/agartha_py-0.5.0-py3-none-any.whl) and install it:
+Download the [published wheel](https://github.com/Blu-Fantasy-Online/Agartha.py/releases/download/v0.5.1/agartha_py-0.5.1-py3-none-any.whl) and install it:
 
 ```text
-python -m pip install ./agartha_py-0.5.0-py3-none-any.whl
+python -m pip install ./agartha_py-0.5.1-py3-none-any.whl
 ```
 
 Official SDK releases, examples, checksums, and issue tracking are available in the [BFO Agartha.py repository](https://github.com/Blu-Fantasy-Online/Agartha.py). Install the published wheel until a public package registry release is announced.

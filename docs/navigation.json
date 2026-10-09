@@ -1,5 +1,5 @@
 {
-  "version": "0.5.0",
+  "version": "0.5.1",
   "pages": [
     { "id": "overview", "title": "Agartha developer documentation", "group": "Start building", "description": "Create an application, install a bot, and choose a guide.", "file": "README.md" },
     { "id": "quick-start", "title": "Build your first bot", "group": "Start building", "description": "Install Agartha.py and run a slash command in your test server.", "file": "quick-start.md" },
